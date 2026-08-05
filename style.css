@@ -11,35 +11,30 @@
   font-family: "DM Sans";
   src: url("fonts/DMSans-Roman-VF.woff2") format("woff2-variations"),
        url("fonts/DMSans-Roman-VF.woff2") format("woff2");
-  font-weight: 100 1000; font-style: normal; font-display: swap;
+  font-weight: 100 1000; font-style: normal; font-display: block;
 }
 @font-face {
   font-family: "DM Sans";
   src: url("fonts/DMSans-Italic-VF.woff2") format("woff2-variations"),
        url("fonts/DMSans-Italic-VF.woff2") format("woff2");
-  font-weight: 100 1000; font-style: italic; font-display: swap;
+  font-weight: 100 1000; font-style: italic; font-display: block;
 }
 @font-face {
   font-family: "DM Mono";
   src: url("fonts/DMMono-Regular.woff2") format("woff2");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "DM Mono";
-  src: url("fonts/DMMono-Medium.woff2") format("woff2");
-  font-weight: 500; font-style: normal; font-display: swap;
+  font-weight: 400; font-style: normal; font-display: block;
 }
 @font-face {
   font-family: "Alegreya";
   src: url("fonts/Alegreya-Roman-VF.woff2") format("woff2-variations"),
        url("fonts/Alegreya-Roman-VF.woff2") format("woff2");
-  font-weight: 400 900; font-style: normal; font-display: swap;
+  font-weight: 400 900; font-style: normal; font-display: block;
 }
 @font-face {
   font-family: "Alegreya";
   src: url("fonts/Alegreya-Italic-VF.woff2") format("woff2-variations"),
        url("fonts/Alegreya-Italic-VF.woff2") format("woff2");
-  font-weight: 400 900; font-style: italic; font-display: swap;
+  font-weight: 400 900; font-style: italic; font-display: block;
 }
 
 :root {
@@ -154,7 +149,6 @@ h2.section {
   letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
   line-height: 1.45; margin: 0;
 }
-.meta.hi { color: var(--ink); font-weight: 500; }
 
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .rule.tight { margin: 1.75rem 0; }
