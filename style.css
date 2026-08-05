@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Peter Ormerod — personal site
    Palette : ink #252525 · paper #F5F3EE · blue #006794
-   Type    : DM Sans · DM Mono (metadata) · Cardo (prose and citations)
+   Type    : DM Sans (everything) · DM Mono (metadata, labels, numbers)
    Layout  : asymmetric two-column grid — a narrow left rail carries
              ordinals, years and tags; the wide right column carries
              the content. Echoes the hanging dates in the printed CV.
@@ -25,19 +25,16 @@
   font-weight: 400; font-style: normal; font-display: block;
 }
 @font-face {
-  font-family: "Cardo";
-  src: url("fonts/Cardo-Roman.woff2") format("woff2");
-  font-weight: 400; font-style: normal; font-display: block;
+  font-family: "Alegreya";
+  src: url("fonts/Alegreya-Roman-VF.woff2") format("woff2-variations"),
+       url("fonts/Alegreya-Roman-VF.woff2") format("woff2");
+  font-weight: 400 900; font-style: normal; font-display: block;
 }
 @font-face {
-  font-family: "Cardo";
-  src: url("fonts/Cardo-Italic.woff2") format("woff2");
-  font-weight: 400; font-style: italic; font-display: block;
-}
-@font-face {
-  font-family: "Cardo";
-  src: url("fonts/Cardo-Bold.woff2") format("woff2");
-  font-weight: 700; font-style: normal; font-display: block;
+  font-family: "Alegreya";
+  src: url("fonts/Alegreya-Italic-VF.woff2") format("woff2-variations"),
+       url("fonts/Alegreya-Italic-VF.woff2") format("woff2");
+  font-weight: 400 900; font-style: italic; font-display: block;
 }
 
 :root {
@@ -51,7 +48,7 @@
 
   --sans:  "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --mono:  "DM Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  --serif: "Cardo", "Iowan Old Style", Palatino, Georgia, serif;
+  --serif: "Alegreya", "Iowan Old Style", Palatino, Georgia, serif;
 
   --measure: 36rem;
   --rail:    7.5rem;         /* left rail width */
@@ -172,10 +169,10 @@ h2.section {
   .home-cols { grid-template-columns: minmax(0,1fr) 19rem; gap: 0 clamp(2.5rem, 5vw, 4.5rem); align-items: start; }
 }
 
-/* the biography is set in Cardo */
+/* the biography is set in Alegreya */
 .bio {
   font-family: var(--serif);
-  font-size: 1.1875rem; line-height: 1.5; letter-spacing: 0;
+  font-size: 1.3125rem; line-height: 1.55; letter-spacing: 0;
   font-feature-settings: "onum" 1, "kern" 1, "liga" 1;
 }
 .bio p { max-width: var(--measure); margin: 0 0 .95em; }
@@ -228,14 +225,14 @@ h2.section {
   .work > .teaser { grid-column: 2; grid-row: 3; }
   .work > .links, .work > .absrow { grid-column: 2; }
 }
-/* citations, summaries and abstracts are set in Cardo */
+/* citations, summaries and abstracts are set in Alegreya */
 .work .cite, .work .teaser, .abs-body {
   font-family: var(--serif);
   font-feature-settings: "onum" 1, "kern" 1, "liga" 1;
   letter-spacing: 0;
 }
-.work .cite { margin: 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.4; max-width: var(--measure); }
-.work .teaser { margin: 0; max-width: var(--measure); font-size: 1.0625rem; line-height: 1.45; }
+.work .cite { margin: 0; font-size: 1.1875rem; font-weight: 600; line-height: 1.5; max-width: var(--measure); }
+.work .teaser { margin: 0; max-width: var(--measure); font-size: 1.1875rem; line-height: 1.5; }
 
 /* journal names in real small caps, letterspaced — the Bluebook manner */
 .cite .with { display: block; }
@@ -244,7 +241,7 @@ h2.section {
   font-feature-settings: "smcp" 1, "onum" 1;
   letter-spacing: .028em;
 }
-/* the italic ampersand belongs to Cardo; anywhere else it stays roman */
+/* the italic ampersand belongs to Alegreya; anywhere else it stays roman */
 .amp { font-variant-caps: normal; font-feature-settings: normal; letter-spacing: 0; }
 .bio .amp, .lede .amp, .cite .amp, .teaser .amp, .abs-body .amp {
   font-style: italic;
@@ -271,7 +268,7 @@ details.abs > summary {
 details.abs > summary:hover { color: var(--ink); }
 details.abs > summary::after { content: " +"; }
 details.abs[open] > summary::after { content: " –"; }
-.abs-body { max-width: var(--measure); margin: 1rem 0 .25rem; font-size: 1.0625rem; line-height: 1.5; }
+.abs-body { max-width: var(--measure); margin: 1rem 0 .25rem; font-size: 1.1875rem; line-height: 1.5; }
 .abs-body p { margin: 0 0 .8em; }
 .abs-body p:last-child { margin-bottom: 0; }
 
